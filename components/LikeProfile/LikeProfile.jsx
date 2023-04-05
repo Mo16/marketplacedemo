@@ -14,6 +14,7 @@ const LikeProfile = () => {
             src={el}
             width={15}
             height={15}
+            alt="profile braground"
             key={i + 1}
             className={Style.like_box_img}
           />

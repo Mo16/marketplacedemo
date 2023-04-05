@@ -17,13 +17,16 @@ const DropZone = ({
   fileSize,
   category,
   properties,
+  uploadToIPFS,
+  setImage,
 
-  image,
 }) => {
   const [fileUrl, setFileUrl] = useState(null);
   const onDrop = useCallback(async (acceptedFile) => {
-    setFileUrl(acceptedFile[0]);
-
+    const url = await uploadToIPFS(acceptedFile[0]);
+    setFileUrl(url)
+    setImage(url)
+    console.log(url)
   });
 
   const { getRootProps, getInputProps } = useDropzone({

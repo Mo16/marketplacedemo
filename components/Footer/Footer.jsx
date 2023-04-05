@@ -22,7 +22,7 @@ export const Footer = () => {
         <div className={Style.footer}>
             <div className={Style.footer_box}>
                 <div className={Style.footer_box_social}>
-                    <Image src={images.logo} height={100} width={100} />
+                    <Image src={images.logo} alt="profile braground" height={100} width={100} />
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Ipsam accusantium culpa error? Ipsa, esse sunt,

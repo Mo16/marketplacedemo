@@ -48,6 +48,7 @@ const connectWallet = () => {
                     alt={el.provider}
                     width={50}
                     height={50}
+                    
                     className={Style.connectWallet_box_provider_item_img}
                   />
                   <p>{el.name}</p>

@@ -3,7 +3,7 @@ import { BsSearch, BsArrowRight } from "react-icons/bs";
 
 //INTERNAL IMPORT
 import Style from "./SearchBar.module.css";
-const SearchBar = () => {
+const SearchBar = ({onClearSearch,onHandleSearch}) => {
   const [search, setSearch] = useState("");
   const [searchItem, setSearchItem] = useState(search);
 
@@ -12,13 +12,13 @@ const SearchBar = () => {
     return () => clearTimeout(timer);
   }, [searchItem]);
 
-  // useEffect(() => {
-  //   if (search) {
-  //     onHandleSearch(search);
-  //   } else {
-  //     onClearSearch();
-  //   }
-  // }, [search]);
+  useEffect(() => {
+    if (search) {
+      onHandleSearch(search);
+    } else {
+      onClearSearch();
+    }
+  }, [search]);
 
   return (
     <div className={Style.SearchBar}>

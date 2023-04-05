@@ -13,7 +13,7 @@ import images from "../img";
 import { Button } from "../components/componentindex";
 import { DropZone } from "../UploadNFT/uploadNFTIndex.js";
 
-const UloadNFT = () => {
+const UloadNFT = ({createNFT, uploadToIPFS}) => {
   const [price, setPrice] = useState("");
   const [active, setActive] = useState(0);
   const [name, setName] = useState("");
@@ -67,7 +67,8 @@ const UloadNFT = () => {
         fileSize={fileSize}
         category={category}
         properties={properties}
-        setImage={images.upload}
+        setImage={setImage}
+        uploadToIPFS={uploadToIPFS}
 
       />
 
